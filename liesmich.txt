@@ -1,0 +1,87 @@
+CKFinder 3.5.3 Integration für Zen Cart 1.5.7
+
+In der deutschen Zen Cart Version 1.5.7 ist der CKEditor als Standard HTML Editor im Adminbereich bereits vorintegriert.
+Über den CKEditor können keine Bilder (z.B. in eine Artikelbeschreibung oder eine Define Page oder EZ Page) hochgeladen werden, da der CKEditor das in der Standardversion nicht unterstützt.
+Dafür ist die kommerzielle Erweiterung CKFinder erforderlich.
+Dieses Plugin ermöglicht die Nutzung des kommerziellen CKFinder-Dateimanagers zum Hochladen und Auswählen von Bildern über den CKEditor in der Zen Cart Administration.
+Die aktuelle Version 3.5.3 des CKFinder wird mitgeliefert.
+
+Voraussetzungen:
+- eine für den vorgesehenen Gebrauch geeignetete CKFinder Lizenz (Details dazu auf https://ckeditor.com/ckfinder/)
+- fixe IP
+- Zen Cart 1.5.7 deutsch
+
+Ohne Lizenz arbeitet dieses Plugin im Demo-Modus. 
+Es liegt an Ihnen, sicherzustellen, dass Ihre Nutzung mit den Lizenzanforderungen übereinstimmt.
+
+Dieses Modul ist auf dem Stand von 1.5.7
+Bevor Sie Ihren Zen Cart Shop weiter modifizieren, stellen Sie sicher, dass Sie die aktuelle deutsche Zen Cart Version 1.5.7 verwenden.
+
+Changelog 3.5.3
+14.02.2022
+* CKFinder auf Version 3.5.3 aktualisiert
+* Anpassungen für Zen Cart 1.5.7 deutsch
+
+Changelog 3.5.2
+26.08.2021
+* CKFinder auf Version 3.5.2 aktualisiert
+
+Changelog 3.5.1.2
+24.06.2021
+* CKFinder auf Version 3.5.1.2 aktualisiert
+* Geänderte Dateien auf den Stand von 1.5.6f gebracht
+* jQuery CKFinder auf 2.1.3 aktualisiert, CKFinder unterstützt 3.6.0 nicht
+
+
+INSTALLATION:
+
+1.
+Im Ordner GEAENDERTE DATEIEN den Ordner DEINADMIN auf den Namen Ihres admin Verzeichnisses umbenennen.
+Es ist sehr unwahrscheinlich, dass Sie die darin enthaltene einzige Datei, die von diesem Plugin geändert wird (DEINADMIN/includes/ckeditor.php), bereits einmal geändert haben.
+Sie können also die bestehende DEINADMIN/includes/ckeditor.php mit der aus diesem Paket ersetzen.
+Wenn Sie ganz auf Nummer sicher gehen wollen, vergleichen Sie diese Datei mit WinMerge oder BeyondCompare mit der entsprechenden Datei in Ihrem Shopverzeichnis und nehmen die Änderungen manuell vor.
+
+2.
+Öffnen Sie folgende Datei mit einem Texteditor:
+NEUE DATEIEN/editors/ckfinder/config.php
+
+ca. Zeile 69 und 70 finden Sie folgende Einträge:
+'baseUrl'      => 'https://www.meinshop.de/assets/',
+'root'         => '/var/www/xxx/assets/',
+
+Ändern Sie auf den entsprechenden echten absoluten Pfad und die entsprechende URL Ihres Shops
+Das assets Verzeichnis wird im Shopverzeichnis angelegt, der absolute Pfad entspricht daher dem der in Ihrer includes/configure.php bei define('DIR_FS_CATALOG', '/xxx/xxx/xxx/'); angegeben ist mit assets dahinter,
+Die URL zum assets Verszeichnis entspricht der in Ihrer includes/configure.php bei define('HTTPS_SERVER', 'https://www.meinshop.de'); angegebenen URL mit /assets dahinter
+
+3. 
+Im Ordner NEUE DATEIEN den Ordner DEINADMIN auf den Namen Ihres admin Verezichnisses umbenennen.
+Nun die Ordner/Dateien aus dem Ordner NEUE DATEIEN in der vorgegebenen Struktur ins Shopverzeichnis hochladen. Dabei werden keine bestehenden Dateien überschrieben
+
+4. 
+Berechtigungen:
+Stellen Sie sicher, dass die folgenden Ordner und Dateien auf Ihrem Server beschreibbar sind (chmod 777):
+/assets/
+CKFinder erstellt hier mehrere Unterverzeichnisse und Dateien, daher muss der Unterordner assets beschreibbar sein.
+/editors/.allowed_ips.txt
+In diese Datei werden von der Zen Cart Administrationen Informationen geschrieben, um CKFinder autorisierten Personen zu erlauben, daher muss diese Datei beschreibbar sein (chmod 777)
+
+5.
+Stellen Sie sicher, dass Sie unter Konfiguration > Shopwartung > diese IP Adressen ausschließen Ihre eigene IP Adresse eingetragen haben.
+
+6.
+Gehen Sie nun in die Artikelbearbeitung.
+Wenn Sie nun z.B. in einer Artikelbeschreibung im CKEditor auf das Bildsymbol clicken, steht dort der neue Reiter Hochladen zur Verfügung
+Ebenso neu der Button Server durchsuchen, mit dem auf bereits ins assets Verzeichnis hochgeladene Bilder zugegriffen werden kann.
+
+7. 
+Lizensierung
+Nachdem Sie eine Lizenz für CKFinder gekauft haben, bearbeiten Sie /editors/ckfinder/config.php und geben Ihren Lizenzschlüssel und den Lizenznamen ein. 
+$config['licenseName'] = '';
+$config['licenseKey']  = '';
+Dies aktiviert alle kommerziellen Funktionen von CKFinder, die mit Ihrer Lizenz verbunden sind.
+
+
+UPDATE VON ÄLTEREN VERSIONEN DIESES PLUGINS
+Falls Sie das Plugin bereits in Ihrem 1.5.7 Shop verwenden und auf Version 3.5.3 aktualisieren wollen, stellen Sie erst sicher, dass Sie bereits auf Zen Cart 1.5.7 deutsch aktualisiert haben
+Danach gehen Sie genauso vor wie unter Neuinstallation beschrieben.
+In Ihrem Fall werden dann beim Upload der neuen Dateien bereits vorhandene überschrieben
