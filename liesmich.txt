@@ -14,8 +14,6 @@ Voraussetzungen:
 Ohne Lizenz arbeitet dieses Plugin im Demo-Modus. 
 Es liegt an Ihnen, sicherzustellen, dass Ihre Nutzung mit den Lizenzanforderungen übereinstimmt.
 
-Dieses Modul ist auf dem Stand von 1.5.7
-Bevor Sie Ihren Zen Cart Shop weiter modifizieren, stellen Sie sicher, dass Sie die aktuelle deutsche Zen Cart Version 1.5.7 verwenden.
 
 Changelog 3.5.3
 14.02.2022
@@ -82,6 +80,6 @@ Dies aktiviert alle kommerziellen Funktionen von CKFinder, die mit Ihrer Lizenz 
 
 
 UPDATE VON ÄLTEREN VERSIONEN DIESES PLUGINS
-Falls Sie das Plugin bereits in Ihrem 1.5.7 Shop verwenden und auf Version 3.5.3 aktualisieren wollen, stellen Sie erst sicher, dass Sie bereits auf Zen Cart 1.5.7 deutsch aktualisiert haben
+Falls Sie das Plugin bereits in Ihrem 1.5.6 Shop verwenden und auf Version 3.5.3 aktualisieren wollen, stellen Sie erst sicher, dass Sie bereits auf Zen Cart 1.5.7 deutsch aktualisiert haben
 Danach gehen Sie genauso vor wie unter Neuinstallation beschrieben.
 In Ihrem Fall werden dann beim Upload der neuen Dateien bereits vorhandene überschrieben

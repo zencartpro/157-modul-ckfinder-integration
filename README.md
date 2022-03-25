@@ -3,7 +3,7 @@ CKFinder Integration im CKEditor für Zen Cart 1.5.7 deutsch
 
 Hinweis: 
 Freigegebene getestete Versionen für den Einsatz in Livesystemen ausschließlich unter Releases herunterladen:
-* https://github.com/zencartpro/156-modul-ckfinder-integration/releases
+* https://github.com/zencartpro/157-modul-ckfinder-integration/releases
 
 In der deutschen Zen Cart Version 1.5.7 ist der CKEditor als Standard HTML Editor im Adminbereich bereits vorintegriert.
 Über den CKEditor können keine Bilder (z.B. in eine Artikelbeschreibung oder eine Define Page oder EZ Page) hochgeladen werden, da der CKEditor das in der Standardversion nicht unterstützt.
